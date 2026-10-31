@@ -25,7 +25,7 @@
 
 ## Commandes de test
 `curl http://localhost:8080/dailyworkout`
-`curl http://localhost:8080/check` (uniquement étapes ex56)
+`curl http://localhost:8080/check` (tags ex56-singleton, ex56-prototype et ex57)
 
 ## Important
-Les captures doivent être prises sur l'exécution réelle. Aucun test Maven ni exécution de l'application n'a été réalisé lors de la génération de cette archive. Les erreurs intentionnelles sont normales aux étapes ex52. Pour ex55-global, des beans Spring autres que Coach peuvent être initialisés au démarrage.
+Les captures doivent être prises sur l'exécution réelle. Les 15 captures originales sont conservées dans `captures/` ; leur contenu et leurs limites ont été vérifiés visuellement et sont décrits dans `README.md`. Lors de la finalisation, `mvn clean verify` a réussi (aucun test automatisé présent) et le JAR final a été lancé : `/dailyworkout` a répondu HTTP 200 avec la réponse natation. Le processus a été arrêté proprement, avec la trace de nettoyage de CricketCoach. Les anciennes étapes n'ont pas été réexécutées. L'erreur intentionnelle est normale à l'étape ex52. Pour ex55-global, des beans Spring autres que Coach peuvent être initialisés au démarrage.

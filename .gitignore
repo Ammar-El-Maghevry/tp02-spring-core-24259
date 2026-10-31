@@ -4,3 +4,28 @@ target/
 .settings/
 .project
 .classpath
+.vscode/
+*.iml
+*.log
+*.tmp
+*.swp
+.DS_Store
+__pycache__/
+.cache/
+
+# Configuration locale et secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+settings-security.xml
+application-local.properties
+application-local.yml
+application-local.yaml
+
+# Archive de rendu générée localement
+/TP02_Ammar_24259.zip
