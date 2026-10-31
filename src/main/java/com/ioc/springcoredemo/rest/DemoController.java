@@ -6,9 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
  private final Coach myCoach;
- private final Coach anotherCoach;
- public DemoController(@Qualifier("cricketCoach") Coach theCoach, @Qualifier("cricketCoach") Coach theAnotherCoach) { this.myCoach = theCoach;  this.anotherCoach = theAnotherCoach;
- }
+ public DemoController(@Qualifier("aquatic") Coach theCoach) { this.myCoach = theCoach;  }
  @GetMapping("/dailyworkout") public String getDailyWorkout() { return myCoach.getDailyWorkout(); }
- @GetMapping("/check") public String check() { return "Comparing beans: myCoach == anotherCoach, " + (myCoach == anotherCoach); }
 }
