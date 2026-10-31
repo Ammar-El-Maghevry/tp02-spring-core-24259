@@ -6,6 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
  private final Coach myCoach;
- public DemoController(Coach theCoach) { this.myCoach = theCoach;  }
+ public DemoController(@Qualifier("cricketCoach") Coach theCoach) { this.myCoach = theCoach;  }
  @GetMapping("/dailyworkout") public String getDailyWorkout() { return myCoach.getDailyWorkout(); }
 }
